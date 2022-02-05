@@ -6,16 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customGreen: {
-          500: '#273136',
-          700: '#1D2835'
-        },
-        offWhite: {
-          50: 'rgba(255,255,255,0.05)',
-          300: 'rgba(255,255,255,0.3)',
+        customGray: {
+          400: '#999',
+          500: '#2a2b30',
         },
         customTeal: {
-          500: '#30beff'
+          700: '#00A3E1'
         }
       },
       borderWidth: {
