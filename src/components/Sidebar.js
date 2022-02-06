@@ -7,22 +7,19 @@ import { useRouter } from "next/router";
 const Sidebar = () => {
   const router = useRouter()
 
-
-
-
   return (
-    <div className='flex flex-col float-left items-center h-full bg-customGray-500 text-customGray-400 w-48'>
+    <div className='flex flex-col items-center h-screen bg-customGray-500 text-customGray-400 w-56'>
       <div className='relative'>
         <Image src='/profile.jpg' layout='intrinsic' width={200} height={200} />
-        <div className='playfair font-bold text-2xl p-2 absolute bottom-2 bg-customTeal-700 text-white w-full text-center bg-opacity-70'>Talha Jubaer</div>
+        <h4 className='playfair font-bold py-2 absolute bottom-2 bg-customTeal-700 text-white w-full text-center bg-opacity-70'>TALHA JUBAER</h4>
       </div>
       <div className={`font-light text-15 w-full mx-auto te flex flex-col`}>
         {navItems.map(item => (
           <div>
-            <div className={'w-3/5 mx-auto mb-4 mt-4 cursor-pointer hover:text-white' + ' ' + (router.pathname == `${item.link}` ? 'text-white' : '')}>
+            <div className={'w-3/5 mx-auto mb-4 mt-4 hover:text-white' + ' ' + (router.pathname == `${item.link}` ? 'text-white' : '')}>
               <FontAwesomeIcon className={`mr-2`} icon={['fas', `${item.icon}`]} />
-              <Link href={item.link}>
-                <a className={'' + ' ' + (router.pathname == `${item.link}` ? 'text-white font-normal' : '')}>{item.name}</a>
+              <Link href={item.link} as={item.link} replace>
+                <a className={'cursor-pointer' + ' ' + (router.pathname == `${item.link}` ? 'text-white font-normal' : '')}>{item.name}</a>
               </Link>
             </div>
             <div className='border-b-1 border-black'></div>
