@@ -8,7 +8,7 @@ const Sidebar = () => {
   const router = useRouter()
 
   return (
-    <div className='fixed flex flex-col items-center h-full bg-customGray-500 text-customGray-400 w-[200px]'>
+    <div className='flex flex-col items-center h-[98vh] bg-customGray-500 text-customGray-400 w-[200px]'>
       <div className='relative'>
         <Image src='/profile.jpg' layout='intrinsic' width={200} height={200} />
         <h4 className='playfair font-bold py-2 absolute bottom-2 bg-customTeal-700 text-white w-full text-center bg-opacity-70'>TALHA JUBAER</h4>

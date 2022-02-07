@@ -23,13 +23,16 @@ h1 {
   font-size:  3.5rem !important;
 }
 h2 {
-  font-size: 1.8rem !important;
+  font-size: 2.2rem !important;
 }
 h3 {
   font-size: 1.5rem !important;
 }
 h4 {
   font-size: 1.3rem !important;
+}
+h5 {
+  font-size: 1rem !important;
 }
 
 .bg-container {
@@ -73,4 +76,7 @@ h4 {
   height: 100%;
   width: 2px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+.services_heading {
+  @apply  text-center relative w-[120px] mx-auto border-b-2 border-customTeal-700 before:h-[5px] before:w-[2px] before:absolute before:bottom-0 before:left-0 before:bg-customTeal-700 after:h-[5px] after:w-[2px] after:absolute after:bottom-0 after:right-0 after:bg-customTeal-700
 }

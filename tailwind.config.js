@@ -32,6 +32,7 @@ module.exports = {
         50: '3.125rem !important',
       },
       gridTemplateColumns: {
+        '2/1': '2fr 1fr',
         '1/2': '1fr 2fr',
         '3/2': '3fr 2fr',
       },
