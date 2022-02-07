@@ -37,7 +37,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="w-full h-full bg-container flex items-center text-white">
+    <div className="relative w-full h-full bg-container flex items-center text-white">
       <div className="flex flex-col w-full text-center items-center pb-20">
         <h1 className="playfair font-bold">TALHA JUBAER</h1>
         <div className="flex w-full justify-center">

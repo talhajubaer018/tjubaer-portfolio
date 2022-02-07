@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className='next_start flex'>
       <Sidebar />
-      <main className='main w-full h-screen flex items-center'>
+      <main className='main absolute left-[200px] w-full h-full'>
         {children}
       </main>
       {/* <Footer /> */}
