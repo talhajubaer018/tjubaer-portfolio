@@ -3,7 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import Header from '../components/Header';
 
+import { useRouter } from 'next/router';
+
 const Home = () => {
+  const router = useRouter()
+
   return (
     <div className='text-white '>
       <div className='next_start '>
@@ -31,7 +35,7 @@ const Home = () => {
       </div>
       <div className='py-12 text-black max-w-[1078px] w-[90%] mx-auto'>
         <div className='text-customTeal-700'>
-          <h2 className='services_heading'>Services</h2>
+          <h2 className='services_heading text-black'>Services</h2>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-x-8  gap-y-12 py-12'>
           <div className='text-center '>

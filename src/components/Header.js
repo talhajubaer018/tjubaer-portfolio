@@ -6,14 +6,9 @@ const Header = () => {
 
   const router = useRouter()
 
-  useEffect (() => {
-    if (typeof window !== 'undefined') {
-      var timer = localStorage.getItem('timer') ? JSON.parse(localStorage.getItem('timer')) : null
-      clearTimeout(timer)
-    }
-  }, [])
   return (
-    <div className='flex items-center py-8 text-white'>
+    <div className={'flex items-center py-8' + ' ' + (router.pathname == `/` ? 'text-white' : 'text-black')}>
+
       <div className='playfair'>
         <h2>TALHA JUBAER</h2>
         <h4>WEB DESIGNER & DEVELOPER</h4>
