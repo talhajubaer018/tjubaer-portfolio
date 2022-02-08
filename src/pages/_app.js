@@ -10,9 +10,7 @@ library.add(fab, fas, faLongArrowAltRight)
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Component {...pageProps} />
   )
 }
 

@@ -1,57 +1,58 @@
-import { useEffect, useRef } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
+import React from 'react';
+import Header from '../components/Header';
 
-
-export default function Home() {
-  const first = useRef(null)
-  const second = useRef(null)
-  const third = useRef(null)
-
-  const timer = null
-
-  const desAnim = () => {
-    timer = setTimeout(desAnim, 3500);
-    if(first.current.classList.contains('is-visible')) {
-      first.current.classList.remove('is-visible')
-      second.current.classList.add('is-visible')
-    }
-    else if (second.current.classList.contains('is-visible')) {
-      second.current.classList.remove('is-visible')
-      third.current.classList.add('is-visible')
-    }
-    else if (third.current.classList.contains('is-visible')) {
-      third.current.classList.remove('is-visible')
-      first.current.classList.add('is-visible')
-    }
-    else {
-      first.current.classList.add('is-visible')
-    }
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('timer', JSON.stringify(timer))
-    }
-  }
-
-
-
-  useEffect (() => {
-      desAnim()
-  }, [])
-
+const Home = () => {
   return (
-    <div className="relative w-full h-full bg-container flex items-center text-white">
-      <div className="flex flex-col w-full text-center items-center pb-20">
-        <h1 className="playfair font-bold">TALHA JUBAER</h1>
-        <div className="flex w-full justify-center">
-          <h3 className="mr-2">I am a</h3>
-          <div className="relative">
-            <div className="opacity-0 font-bold text-xl">Web Developer</div>
-            <div className="w-screen text-left absolute top-0 left-0">
-              <h3 ref={first} className='designation'>Web Developer</h3>
-              <h3 ref={second} className='designation'>Freelancer</h3>
-              <h3 ref={third} className='designation'>UI/UX Designer</h3>
+    <div className='text-white '>
+      <div className='next_start '>
+        <div className='max-w-[1078px] w-[90%] mx-auto'>
+          <Header />
+          <div className='py-20'>
+            <div>
+              <h2 className='font-bold'>Websites Done Right.</h2>
+              <h4 className='py-4'>I enjoy building everything from small business websites to rich interactive websites. I specialize in front end web development and converting existing designs to web pages. </h4>
             </div>
+            <div className='py-12'>
+              <button className='bg-customTeal-700 p-4 rounded-full'>
+                <Link href='/portfolio' as='/portfolio'>
+                  <a className={'cursor-pointer p-4 font-bold text-xl'}>Check My Portfolio</a>
+                </Link>
+              </button>
+              <button className='bg-customTeal-700 p-4 rounded-full ml-8'>
+                <Link href='/contact' as='/contact'>
+                  <a className={'cursor-pointer p-4 font-bold text-xl'}>Contact Me</a>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='py-12 text-black max-w-[1078px] w-[90%] mx-auto'>
+        <div className='text-customTeal-700'>
+          <h2 className='services_heading'>Services</h2>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-x-8  gap-y-12 py-12'>
+          <div className='text-center '>
+            <FontAwesomeIcon className='text-customTeal-700 mb-2' size='2x' icon={['fas', 'desktop']} />
+            <h4 className='text-customTeal-700 mb-4 font-bold'>Web Design + Development</h4>
+            <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.</p>
+          </div>
+          <div className='text-center'>
+            <FontAwesomeIcon className='text-customTeal-700 mb-2' size='2x' icon={['fas', 'eye']} />
+            <h4 className='text-customTeal-700 mb-4 font-bold'>Converting Design to Website</h4>
+            <p>Converting your own design to a website with the latest features.</p>
+          </div>
+          <div className='text-center'>
+            <FontAwesomeIcon className='text-customTeal-700 mb-2' size='2x' icon={['fas', 'mobile-alt']} />
+            <h4 className='text-customTeal-700 mb-4 font-bold'>Responsive Design</h4>
+            <p>A responsive design which makes your website accessible to all users, regardless of their device.</p>
           </div>
         </div>
       </div>
     </div>
   )
-}
+};
+
+export default Home;
