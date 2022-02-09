@@ -15,7 +15,7 @@ const Sidebar = () => {
       </div>
       <div className={`font-light text-15 w-full mx-auto te flex flex-col`}>
         {navItems.map(item => (
-          <div>
+          <div key={item.id}>
             <div className={'w-3/5 mx-auto mb-4 mt-4 hover:text-white' + ' ' + (router.pathname == `${item.link}` ? 'text-white' : '')}>
               <FontAwesomeIcon className={`mr-2`} icon={['fas', `${item.icon}`]} />
               <Link href={item.link} as={item.link} replace>
