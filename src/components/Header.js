@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className={'flex items-center py-8' + ' ' + (router.pathname == `/` ? 'text-white' : 'text-black')}>
 
-      <div className='playfair'>
+      <div className=''>
         <h2>TALHA JUBAER</h2>
         <h4>WEB DESIGNER & DEVELOPER</h4>
       </div>

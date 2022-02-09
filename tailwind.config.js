@@ -7,11 +7,15 @@ module.exports = {
     extend: {
       colors: {
         customGray: {
+          100: '#eee',
           400: '#999',
           500: '#2a2b30',
+          800: '#616161',
+          900: '#444649',
         },
         customTeal: {
-          700: '#00A3E1'
+          700: '#00A3E1',
+          800: '#117ea8',
         }
       },
       borderWidth: {
