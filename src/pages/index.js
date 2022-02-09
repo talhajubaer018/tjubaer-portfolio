@@ -19,12 +19,12 @@ const Home = () => {
               <h4 className='py-4'>I enjoy building everything from small business websites to rich interactive websites. I specialize in front end web development and converting existing designs to web pages. </h4>
             </div>
             <div className='py-12'>
-              <button className='bg-customTeal-700 p-4 rounded-full'>
+              <button className='border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 p-4 rounded-full'>
                 <Link href='/portfolio' as='/portfolio'>
                   <a className={'cursor-pointer p-4 font-bold text-xl'}>Check My Portfolio</a>
                 </Link>
               </button>
-              <button className='bg-customTeal-700 p-4 rounded-full ml-8'>
+              <button className='border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 p-4 rounded-full ml-8'>
                 <Link href='/contact' as='/contact'>
                   <a className={'cursor-pointer p-4 font-bold text-xl'}>Contact Me</a>
                 </Link>

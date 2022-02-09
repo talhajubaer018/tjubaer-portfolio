@@ -24,11 +24,11 @@ const Header = () => {
             <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/portfolio` ? 'border-b-2 border-customTeal-700 font-normal' : '')}>PORTFOLIO</a>
           </Link>
         </div>
-        <div className='p-4'>
+        {/* <div className='p-4'>
           <Link href='/contact' as='/contact'>
             <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/contact` ? 'border-b-2 border-customTeal-700 font-normal' : '')}>CONTACT</a>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -34,26 +34,31 @@ export default Sidebar;
 
 const navItems = [
   {
+    id: 1,
     name: 'HOME',
     icon: 'home',
     link: '/'
   },
   {
+    id: 2,
     name: 'ABOUT ME',
     icon: 'user',
     link: '/about'
   },
   {
+    id: 3,
     name: 'RESUME',
     icon: 'file-alt',
     link: '/resume'
   },
   {
+    id: 4,
     name: 'PORTFOLIO',
     icon: 'suitcase',
     link: '/portfolio'
   },
   {
+    id: 5,
     name: 'CONTACT',
     icon: 'envelope',
     link: '/contact'
