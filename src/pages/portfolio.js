@@ -13,7 +13,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div className='max-w-[1200px] w-[90%] mx-auto'>
-        <div className='py-4'>
+        <div className='pt-4 pb-12'>
           <h2 className='text-center services_heading my-8'>Portfolio</h2>
           {
             portfolioItems.map(item => (
