@@ -56,7 +56,7 @@ const Header = () => {
         <span className='hamburger-bottom absolute top-0 left-0 w-6 h-0.5 bg-white transform rotate-0 transition-all duration-500 translate-y-4'></span>
       </button>
       {/* mobile nav */}
-      <div ref={sideMenu} className='sideMenu flex flex-col md:hidden ml-auto absolute right-0 top-0 bg-black text-white w-full py-6 items-center'>
+      <div ref={sideMenu} className='sideMenu flex flex-col md:hidden ml-auto fixed right-0 top-0 bg-black text-white w-full py-6 items-center'>
         <div className='p-4'>
           <Link href='/' as='/'>
             <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/` ? 'border-b-2 border-customTeal-700 font-normal' : '')}>HOME</a>
