@@ -40,6 +40,23 @@ h4 {
 h5 {
   font-size: 1rem !important;
 }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size:  3.2rem !important;
+  }
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  h4 {
+    font-size: 1.1rem !important;
+  }
+  h5 {
+    font-size: 0.9rem !important;
+  }
+}
 
 .next_start {
   background-image: url('/home-bg2.jpg');
@@ -63,6 +80,24 @@ h5 {
   height: 100%;
   opacity: .8;
   z-index: -1;
+}
+/* hamburger button */
+.open .hamburger-top {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+/* sideMenu open close */
+.sideMenu {
+  transform: translateX(100%);
+  transition: all 0.3s;
+}
+.sideMenu.open {
+  transform: translateX(0);
 }
 
 .designation {

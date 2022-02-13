@@ -5,8 +5,9 @@ import Header from '../components/Header';
 
 import { useRouter } from 'next/router';
 
-const Home = () => {
+const Home = ({ isMobile }) => {
   const router = useRouter()
+
 
   return (
     <div className='text-white '>
@@ -18,7 +19,7 @@ const Home = () => {
               <h2 className='font-bold'>Websites Done Right.</h2>
               <h4 className='py-4'>I enjoy building everything from small business websites to rich interactive websites. I specialize in front end web development and converting existing designs to web pages. </h4>
             </div>
-            <div className='py-12'>
+            <div className='py-12 text-center md:text-left'>
               <button className='border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 p-4 rounded-full'>
                 <Link href='/portfolio' as='/portfolio'>
                   <a className={'cursor-pointer p-4 font-bold text-xl'}>View My Works</a>
@@ -68,19 +69,34 @@ const Home = () => {
         {
           skills.map((skill) => (
             <div key={skill.id} className='max-w-[900px] mx-auto flex text-customGray-800 justify-center mb-4'>
-              <div className='bg-customTeal-700 py-1 text-white w-[15%] text-center'>{skill.name}</div>
+              <div className='bg-customTeal-700 py-1 text-white w-[150px] text-center'>{skill.name}</div>
               <div className='flex w-full'>
                 <div style={{width: `${skill.size}`}} className={`bg-customTeal-800 py-1 text-white`}></div>
-                <div style={{width: `${skill.textSize * skill.multiplier + 'px'}`}} className={` text-right pr-6 bg-customGray-100 py-1 text-black`}>{skill.size}</div>
+                <div style={{width: `${skill.textSize * skill.multiplier * (isMobile ? 0.35 : 1) + 'px'}`}} className={` text-right pr-0 md:pr-6 bg-customGray-100 py-1 text-black`}>{skill.size}</div>
               </div>
             </div>
           ))
         }
-
       </section>
     </div>
   )
 };
+
+Home.getInitialProps = ({ req }) => {
+  let userAgent;
+  if (req) { // if you are on the server and you get a 'req' property from your context
+    userAgent = req.headers['user-agent'] // get the user-agent from the headers
+  } else {
+    userAgent = navigator.userAgent // if you are on the client you can access the navigator from the window object
+  }
+
+  let isMobile = Boolean(userAgent.match(
+    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  ))
+  console.log(isMobile)
+
+  return { isMobile }
+}
 
 const skills = [
   {
@@ -121,9 +137,9 @@ const skills = [
   {
     id: 6,
     name: 'Nodejs',
-    size: '60%',
+    size: '65%',
     textSize: '90',
-    multiplier: '4'
+    multiplier: '3.5'
   },
   {
     id: 7,

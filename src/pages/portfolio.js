@@ -6,31 +6,37 @@ import Link from 'next/link';
 const Portfolio = () => {
 
   return (
-    <div className='max-w-[1200px] w-[90%] mx-auto'>
-      <Header />
-      <div className='py-4'>
-        <h2 className='text-center services_heading my-8'>Portfolio</h2>
-        {
-          portfolioItems.map(item => (
-            <div key={item.id} className='grid grid-cols-2 gap-x-12 gap-y-20 py-8'>
-              <Image src={item.image_src} layout='responsive' objectFit='contain' width={1080} height={810} priority/>
-              <div className='pt-12'>
-                <h2 className='relative inline-block portfolio font-bold text-customGray-900'>{item.name}
-                  <h5 className='ml-4 bg-customTeal-700 absolute -right-2 top-1/2 transform translate-x-full -translate-y-1/2 text-white p-1 rounded'>{item.year}</h5>
-                </h2>
-                <div>
-                  <h5 className='block text-customGray-800 mt-4'>{item.description}</h5>
-                </div>
-                <button className='block mt-12'>
-                  <Link href={item.link} as={item.link}>
-                    <a className={'cursor-pointer font-bold text-customGray-900 text-xl border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 px-8 py-4 rounded-full'}>Visit Site</a>
-                  </Link>
-                </button>
-              </div>
-            </div>
-          ))
-        }
+    <div>
+      <div className='bg-black bg-opacity-80 text-white'>
+        <div className='max-w-[1200px] w-[90%] mx-auto'>
+          <Header />
+        </div>
       </div>
+      <div className='max-w-[1200px] w-[90%] mx-auto'>
+        <div className='py-4'>
+          <h2 className='text-center services_heading my-8'>Portfolio</h2>
+          {
+            portfolioItems.map(item => (
+              <div key={item.id} className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 md:gap-y-20 py-0 md:py-8'>
+                <Image src={item.image_src} layout='responsive' objectFit='contain' width={1080} height={810} priority/>
+                <div className='pt-0 sm:pt-12 text-center md:text-left mr-8 md:mr-0'>
+                  <h2 className='relative inline-block portfolio font-bold text-customGray-900'>{item.name}
+                    <h5 className='ml-4 bg-customTeal-700 absolute -right-2 top-1/2 transform translate-x-full -translate-y-1/2 text-white p-1 rounded'>{item.year}</h5>
+                  </h2>
+                  <div>
+                    <h5 className='block text-customGray-800 mt-4'>{item.description}</h5>
+                  </div>
+                  <button className='block mx-auto md:mx-0'>
+                    <Link href={item.link} as={item.link}>
+                      <a className={'block mt-4 md:mt-12 cursor-pointer font-bold text-customGray-900 text-xl border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 px-8 py-4 rounded-full'}>Visit Site</a>
+                    </Link>
+                  </button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+    </div>
     </div>
   )
 };
