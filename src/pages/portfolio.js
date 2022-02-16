@@ -7,7 +7,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div className='bg-black bg-opacity-80 text-white'>
+      <div className='bg-black bg-opacity-90 text-white'>
         <div className='max-w-[1200px] w-[90%] mx-auto'>
           <Header />
         </div>
