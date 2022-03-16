@@ -1,9 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import Link from 'next/link';
 import React from 'react';
 import Header from '../components/Header';
 
 import { useRouter } from 'next/router';
+config.autoAddCss = false; /* eslint-disable import/first */
 
 const Home = ({ isMobile }) => {
   const router = useRouter()
@@ -22,7 +25,7 @@ const Home = ({ isMobile }) => {
             <h4 className='text-customTeal-700'>Hi, my name is</h4>
             <h1 className='font-bold'>Talha Jubaer</h1>
             <h1 className='font-bold text-customFontColor-dark'>I build things for the web.</h1>
-            <h3 className='text-customFontColor-dark'>I'm a fullstack developer specializing in building exceptional pixel perfect responsive websites.</h3>
+            <h3 className='text-customFontColor-dark'>I&apos;m a fullstack developer specializing in building exceptional pixel perfect responsive websites.</h3>
             <div className='py-12 text-center md:text-left'>
               <button className='border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 p-4 rounded-full'>
                 <Link href='/portfolio' as='/portfolio'>
@@ -43,31 +46,31 @@ const Home = ({ isMobile }) => {
           <h2 className='services_heading text-customFontColor-light font-bold'>ABOUT ME</h2>
         </div>
         <div className='text-customFontColor-light py-6'>
-          <p>Hi, my name is Talha and I enjoy creating new and unique websites for my clients. My interest in web development started in 2013 with HTML, CSS and Dreamweaver by making simple websites. Fast forward to today, I've expanded my skills to create unique and perfectly designed websites.</p>
-          <h5 className='font-bold my-4'>Here are some technologies I've been using recently:</h5>
+          <p>Hi, my name is Talha and I enjoy creating new and unique websites for my clients. My interest in web development started in 2013 with HTML, CSS and Dreamweaver by making simple websites. Fast forward to today, I&apos;ve expanded my skills to create unique and perfectly designed websites.</p>
+          <h5 className='font-bold my-4'>Here are some technologies I&apos;ve been using recently:</h5>
           <div className='grid grid-cols-2 items-center justify-center'>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700' icon={['fas', 'caret-right']} />
               <p>JavaScript (ES6+)</p>
             </div>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>React</p>
             </div>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>Nextjs</p>
             </div>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>Nodejs</p>
             </div>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>Mongodb</p>
             </div>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>TailwindCSS</p>
             </div>
           </div>

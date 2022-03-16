@@ -29,9 +29,9 @@ const Header = () => {
   return (
     <div className={'flex items-center py-8'}>
       <div className='z-30'>
-        <div class="hexagon">
-          <div class="hexTop"></div>
-          <div class="hexBottom"></div>
+        <div className="hexagon">
+          <div className="hexTop"></div>
+          <div className="hexBottom"></div>
           <h3 className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>TJ</h3>
         </div>
       </div>
