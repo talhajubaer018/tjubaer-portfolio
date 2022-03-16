@@ -50,7 +50,7 @@ const Home = ({ isMobile }) => {
           <h5 className='font-bold my-4'>Here are some technologies I&apos;ve been using recently:</h5>
           <div className='grid grid-cols-2 items-center justify-center'>
             <div className='flex items-center'>
-              <FontAwesomeIcon className='text-customTeal-700' icon={['fas', 'caret-right']} />
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' icon={['fas', 'caret-right']} />
               <p>JavaScript (ES6+)</p>
             </div>
             <div className='flex items-center'>
