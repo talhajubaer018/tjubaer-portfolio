@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = () => {
   const hamburger = useRef(null)
@@ -27,20 +28,22 @@ const Header = () => {
 
   return (
     <div className={'flex items-center py-8'}>
-
-      <div className=''>
-        <h2>TALHA JUBAER</h2>
-        <h4>WEB DESIGNER & DEVELOPER</h4>
+      <div className='z-30'>
+        <div class="hexagon">
+          <div class="hexTop"></div>
+          <div class="hexBottom"></div>
+          <h3 className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>TJ</h3>
+        </div>
       </div>
       <div className='hidden md:flex ml-auto'>
         <div className='p-4'>
           <Link href='/' as='/'>
-            <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/` ? 'border-b-2 border-customTeal-700 font-normal' : '')}>HOME</a>
+            <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/` ? 'border-b-2 border-customTeal-700 font-normal ' : 'hover:text-customTeal-700 transition-all duration-300')}>HOME</a>
           </Link>
         </div>
         <div className='p-4'>
           <Link href='/portfolio' as='/portfolio'>
-            <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/portfolio` ? 'border-b-2 border-customTeal-700 font-normal' : '')}>PORTFOLIO</a>
+            <a className={'cursor-pointer p-4' + ' ' + (router.pathname == `/portfolio` ? 'border-b-2 border-customTeal-700 font-normal' : 'hover:text-customTeal-700 transition-all duration-300')}>PORTFOLIO</a>
           </Link>
         </div>
         {/* <div className='p-4'>

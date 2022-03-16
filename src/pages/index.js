@@ -10,15 +10,19 @@ const Home = ({ isMobile }) => {
 
 
   return (
-    <div className='text-white '>
+    <div className='text-customFontColor-light '>
       <section className='next_start '>
-        <div className='max-w-[1200px] w-[90%] mx-auto'>
-          <Header />
+        <div>
+          <div className='max-w-[1200px] w-[90%] mx-auto'>
+            <Header />
+          </div>
+        </div>
+        <div className='sm:max-w-[768px] md:max-w-[900px] lg:max-w-[1200px] w-[90%] mx-auto'>
           <div className='py-20'>
-            <div>
-              <h2 className='font-bold'>Websites Done Right.</h2>
-              <h4 className='py-4'>I enjoy building everything from small business websites to rich interactive websites. I specialize in front end web development and converting existing designs to web pages. </h4>
-            </div>
+            <h4 className='text-customTeal-700'>Hi, my name is</h4>
+            <h1 className='font-bold'>Talha Jubaer</h1>
+            <h1 className='font-bold text-customFontColor-dark'>I build things for the web.</h1>
+            <h3 className='text-customFontColor-dark'>I'm a fullstack developer specializing in building exceptional pixel perfect responsive websites.</h3>
             <div className='py-12 text-center md:text-left'>
               <button className='border-2 border-customTeal-700 hover:bg-customTeal-700 hover:text-white transition-colors duration-300 p-4 rounded-full'>
                 <Link href='/portfolio' as='/portfolio'>
@@ -36,33 +40,79 @@ const Home = ({ isMobile }) => {
       </section>
       <section className='py-12 text-black max-w-[1200px] w-[90%] mx-auto'>
         <div className='text-customTeal-700'>
-          <h2 className='services_heading text-customGray-900 font-bold'>ABOUT</h2>
+          <h2 className='services_heading text-customFontColor-light font-bold'>ABOUT ME</h2>
+        </div>
+        <div className='text-customFontColor-light py-6'>
+          <p>Hi, my name is Talha and I enjoy creating new and unique websites for my clients. My interest in web development started in 2013 with HTML, CSS and Dreamweaver by making simple websites. Fast forward to today, I've expanded my skills to create unique and perfectly designed websites.</p>
+          <h5 className='font-bold my-4'>Here are some technologies I've been using recently:</h5>
+          <div className='grid grid-cols-2 items-center justify-center'>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>JavaScript (ES6+)</p>
+            </div>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>React</p>
+            </div>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>Nextjs</p>
+            </div>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>Nodejs</p>
+            </div>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>Mongodb</p>
+            </div>
+            <div className='flex items-center'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2 mr-2' size='1x' icon={['fas', 'caret-right']} />
+              <p>TailwindCSS</p>
+            </div>
+          </div>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-x-8  gap-y-12 py-12'>
           <div className='text-center '>
-            <div className='flex items-center justify-center mb-4 bg-customTeal-700 w-[100px] h-[100px] rounded-full mx-auto'>
-              <FontAwesomeIcon className='text-white mt-2 mb-2' size='2x' icon={['fas', 'desktop']} />
+            <div className='flex items-center justify-center mb-4 w-[100px] h-[100px] rounded-full mx-auto'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2' size='3x' icon={['fas', 'code']} />
             </div>
-            <h4 className='text-customGray-800 mb-4 font-bold'>Web Design + Development</h4>
-            <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.</p>
+            <h4 className='text-customFontColor-light mb-4 font-bold'>Fullstack Developer</h4>
+            <p className='text-customFontColor-dark'>I like to code things from scratch and enjoy bringing ideas to life in the web.</p>
+            <div className='text-customFontColor-light flex flex-col py-4 md:py-10 items-center justify-center'>
+              <p className='font-bold text-customTeal-700 mb-2'>Languages I speak</p>
+              <p>HTML, CSS, JavaScript, Sass, Less</p>
+            </div>
+            <div className='text-customFontColor-light flex flex-col py-4 md:py-10 items-center justify-center'>
+              <p className='font-bold text-customTeal-700 mb-2'>Frameworks I use</p>
+              <p>React, Nextjs, Nodejs, Express, Mongodb, Bootstrap, TailwindCSS, Material-ui</p>
+            </div>
           </div>
           <div className='text-center'>
-            <div className='flex items-center justify-center mb-4 bg-customTeal-700 w-[100px] h-[100px] rounded-full mx-auto'>
-              <FontAwesomeIcon className='text-white mt-2 mb-2' size='2x' icon={['fas', 'eye']} />
+            <div className='flex items-center justify-center mb-4  w-[100px] h-[100px] rounded-full mx-auto'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2' size='3x' icon={['fas', 'file-code']} />
             </div>
-            <h4 className='text-customGray-800 mb-4 font-bold'>Converting Design to Website</h4>
-            <p>Converting your own design to a website with the latest features.</p>
+            <h4 className='text-customFontColor-light mb-4 font-bold'>UI/UX Developer</h4>
+            <p className='text-customFontColor-dark'>I can convert your own design to a website with the latest features.</p>
+            <div className='text-customFontColor-light flex flex-col  py-4 md:py-10 items-center justify-center'>
+              <p className='font-bold text-customTeal-700 mb-2'>Tools I use</p>
+              <p>Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator</p>
+            </div>
           </div>
           <div className='text-center'>
-            <div className='flex items-center justify-center mb-4 bg-customTeal-700 w-[100px] h-[100px] rounded-full mx-auto'>
-              <FontAwesomeIcon className='text-white mt-2 mb-2' size='2x' icon={['fas', 'mobile-alt']} />
+            <div className='flex items-center justify-center mb-4  w-[100px] h-[100px] rounded-full mx-auto'>
+              <FontAwesomeIcon className='text-customTeal-700 mt-2 mb-2' size='3x' icon={['fas', 'mobile-alt']} />
             </div>
-            <h4 className='text-customGray-800 mb-4 font-bold'>Responsive Design</h4>
-            <p>A responsive design which makes your website accessible to all users, regardless of their device.</p>
+            <h4 className='text-customFontColor-light mb-4 font-bold'>Responsive Websites</h4>
+            <p className='text-customFontColor-dark'>A responsive design which makes your website accessible to all users, regardless of their device.</p>
+            <div className='text-customFontColor-light flex flex-col py-4 md:py-10 items-center justify-center'>
+              <p className='font-bold text-customTeal-700 mb-2'>Frameworks/Tools I use</p>
+              <p>Bootstrap, TailwindCSS, Material-ui, Scss, Custom CSS</p>
+            </div>
           </div>
         </div>
       </section>
-      <section className='pb-20 max-w-[1200px] w-[90%] mx-auto'>
+      {/* <section className='pb-20 max-w-[1200px] w-[90%] mx-auto'>
         <div className='text-customTeal-700 mb-8'>
           <h2 className='services_heading text-customGray-900 font-bold'>SKILLS</h2>
         </div>
@@ -77,7 +127,7 @@ const Home = ({ isMobile }) => {
             </div>
           ))
         }
-      </section>
+      </section> */}
     </div>
   )
 };

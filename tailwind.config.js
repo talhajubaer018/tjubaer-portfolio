@@ -14,8 +14,16 @@ module.exports = {
           900: '#444649',
         },
         customTeal: {
-          700: '#00A3E1',
+          700: '#02b7ff',
           800: '#117ea8',
+        },
+        customNavy: {
+          bg: '#0a192f',
+          bg2: '#112138',
+        },
+        customFontColor: {
+          light: '#ccd6f6',
+          dark: '#8892b0'
         }
       },
       borderWidth: {
