@@ -19,7 +19,7 @@ const Portfolio = () => {
             portfolioItems.map(item => (
               <div key={item.id} className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 md:gap-y-20 py-0 md:py-8'>
                 <Image src={item.image_src} layout='responsive' objectFit='contain' width={1080} height={810} priority/>
-                <div className='pt-0 sm:pt-12 text-center md:text-left mr-8 md:mr-0'>
+                <div className='pt-0 sm:pt-12 text-center md:text-left  md:mr-0'>
                   <h2 className='relative inline-block portfolio font-bold '>{item.name}
                     <h5 className='ml-4 bg-customTeal-700 absolute -right-2 top-1/2 transform translate-x-full -translate-y-1/2 text-white p-1 rounded'>{item.year}</h5>
                   </h2>
@@ -51,7 +51,7 @@ const portfolioItems = [
     name: 'Proshop',
     year: '2022',
     description: 'An ecommerce store for selling with complete store functionality.',
-    tools: 'React, React-Bootstrap, Nodejs, Express, Mongodb, Mongoose, heroku, Css',
+    tools: 'React, React-Bootstrap, Redux, Nodejs, Express, Mongodb, Mongoose, heroku',
     link: 'https://proshopapp1994.herokuapp.com/'
   },
   {
