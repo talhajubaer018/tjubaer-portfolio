@@ -46,7 +46,16 @@ const Portfolio = () => {
 
 const portfolioItems = [
   {
-    id: 6,
+    id: 1,
+    image_src: '/cars-inn.png',
+    name: 'Cars Inn',
+    year: '2022',
+    description: 'An car website with some of the latest featured models from different companies.',
+    tools: 'React, NextJS, SCSS, Swiper, Framer Motion, TailwindCSS',
+    link: 'https://cars-inn.vercel.app/featured'
+  },
+  {
+    id: 2,
     image_src: '/proshop.png',
     name: 'Proshop',
     year: '2022',
@@ -55,7 +64,7 @@ const portfolioItems = [
     link: 'https://proshopapp1994.herokuapp.com/'
   },
   {
-    id: 1,
+    id: 3,
     image_src: '/sneaker-pimp.png',
     name: 'Sneakerpimp',
     year: '2021',
@@ -64,7 +73,7 @@ const portfolioItems = [
     link: 'https://sneakerpimpbd.co/'
   },
   {
-    id: 2,
+    id: 4,
     image_src: '/mark-colcolough.png',
     name: 'Mark Colcolough',
     year: '2021',
@@ -73,7 +82,7 @@ const portfolioItems = [
     link: 'https://mark-colcolough.vercel.app/'
   },
   {
-    id: 3,
+    id: 5,
     image_src: '/werder-vigano.png',
     name: 'Werder Vigano',
     year: '2020',
@@ -82,7 +91,7 @@ const portfolioItems = [
     link: 'https://www.werdervigano.ch/'
   },
   {
-    id: 4,
+    id: 6,
     image_src: '/bunking.png',
     name: 'Order Bun King',
     year: '2020',
@@ -91,7 +100,7 @@ const portfolioItems = [
     link: 'https://order-bun-king.vercel.app/'
   },
   {
-    id: 5,
+    id: 7,
     image_src: '/spg.png',
     name: 'SPG',
     year: '2019',
